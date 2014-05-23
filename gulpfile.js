@@ -18,6 +18,11 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('dist/css'));
 });
 
+gulp.task('dist-sass', function() {
+  return gulp.src('scss/*.scss')
+    .pipe(gulp.dest('dist/scss'));
+});
+
 gulp.task('scripts', function() {
   return gulp.src('lumber.js')
     .pipe(gulp.dest('dist'))
@@ -31,4 +36,4 @@ gulp.task('watch', function() {
   gulp.watch('scss/*.scss', ['sass']);
 });
 
-gulp.task('default', ['lint', 'sass', 'scripts', 'watch']);
+gulp.task('default', ['lint', 'sass', 'dist-sass', 'scripts', 'watch']);

@@ -22,8 +22,16 @@ __An example of it in action:__
 
 ## Installation
 
+
+
+### Development
+
+This project uses gulp to automate tasks like jshinting, uglification, and sass compilation:
+
 ```
 npm install .
 npm install -g gulp
 gulp
 ```
+
+For further documentation on gulp, a good place to start would be [Travis Maynard's blog post](http://travismaynard.com/writing/getting-started-with-gulp).
