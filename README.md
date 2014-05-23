@@ -31,7 +31,7 @@ dist/
   scss/
     lumber.scss // Sass version of lumber.js styling.
   lumber.js     // Development version of lumber.js.
-  lumber.min.js // Minified version of lumber.js.
+  lumber.min.js // Minified, production version of lumber.js.
 ```
 
 ### Development
