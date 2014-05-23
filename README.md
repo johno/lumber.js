@@ -19,3 +19,11 @@ __An example of it in action:__
   });
 </script>
 ```
+
+## Installation
+
+```
+npm install .
+npm install -g gulp
+gulp
+```
