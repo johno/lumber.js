@@ -22,7 +22,17 @@ __An example of it in action:__
 
 ## Installation
 
+Distribution files are available in the [dist directory](https://github.com/johnotander/lumberjs/tree/master/dist).
 
+```
+dist/
+  css/
+    lumber.css  // Compiled, css version of lumber.scss.
+  scss/
+    lumber.scss // Sass version of lumber.js styling.
+  lumber.js     // Development version of lumber.js.
+  lumber.min.js // Minified version of lumber.js.
+```
 
 ### Development
 
