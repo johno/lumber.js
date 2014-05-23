@@ -29,6 +29,7 @@
     "gulp-jshint": "^1.6.1",
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^0.7.1",
-    "gulp-uglify": "^0.3.0"
+    "gulp-uglify": "^0.3.0",
+    "gulp-using": "0.0.1"
   }
 }
