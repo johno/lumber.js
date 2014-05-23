@@ -22,5 +22,13 @@
   "bugs": {
     "url": "https://github.com/johnotander/lumberjs/issues"
   },
-  "homepage": "https://github.com/johnotander/lumberjs"
+  "homepage": "https://github.com/johnotander/lumberjs",
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "gulp-concat": "^2.2.0",
+    "gulp-jshint": "^1.6.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^0.7.1",
+    "gulp-uglify": "^0.3.0"
+  }
 }
