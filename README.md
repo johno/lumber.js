@@ -39,6 +39,7 @@ dist/
 This project uses gulp to automate tasks like jshinting, uglification, and sass compilation:
 
 ```
+git clone https://github.com/johnotander/lumberjs.git && cd lumberjs
 npm install .
 npm install -g gulp
 gulp
