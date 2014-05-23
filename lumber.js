@@ -86,6 +86,7 @@ function lumber_graph(chartDiv) {
   else if (lumberOpts.type == "line")        { lumber.lineChart(chartDiv, lumberOpts);   }
   else if (lumberOpts.type == "histogram")   { lumber.histogram(chartDiv, lumberOpts);   }
   else if (lumberOpts.type == "scatterplot") { lumber.scatterplot(chartDiv, lumberOpts); }
+  else if (lumberOpts.type == "stackedbar")  { lumber.stackedBar(chartDiv, lumberOpts);  }
 }
 
 /*
@@ -246,6 +247,11 @@ function lumber_histogram(chartDiv, lumberOpts) {
 
 lumber.scatterplot = lumber_scatterplot;
 function lumber_scatterplot(chartDiv, lumberOpts) {
+  // ...
+}
+
+lumber.stackedBar = lumber_stackedBar;
+function lumber_stackedBar(chartDiv, lumberOpts) {
   // ...
 }
 
