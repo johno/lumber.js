@@ -1,0 +1,26 @@
+{
+  "name": "lumberjs",
+  "version": "0.0.0",
+  "description": "Create simple, beautiful graphs with a d3.js wrapper.",
+  "main": "lumber.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnotander/lumberjs.git"
+  },
+  "keywords": [
+    "d3.js",
+    "graphing",
+    "lumber.js",
+    "lumber",
+    "charts"
+  ],
+  "author": "John Otander (@4lpine)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnotander/lumberjs/issues"
+  },
+  "homepage": "https://github.com/johnotander/lumberjs"
+}
