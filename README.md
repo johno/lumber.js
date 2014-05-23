@@ -46,3 +46,11 @@ gulp
 ```
 
 For further documentation on gulp, a good place to start would be [Travis Maynard's blog post](http://travismaynard.com/writing/getting-started-with-gulp).
+
+## Contributing
+
+1. Fork it ( http://github.com/johnotander/lumberjs/fork )
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
