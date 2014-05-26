@@ -10,14 +10,10 @@ __An example of it in action:__
 <!-- Set the graph information in the data attributes of an svg tag. -->
 <svg id="lumber"
      data-lumber-type="bar"
-     data-values="3,2,3,4,5,6,7,6,5,4,2,6,5,6">
+     data-lumber-y-axis-label="Frequency"
+     data-lumber-x-axis-label="Letter"
+     data-lumber-values="3:A,2:B,3:C,4:D,5:E,7:F,6:G,5:H,4:I,2:J,6:K,5:L,6:M">
 </svg>
-<script>
-  // When the DOM is loaded, call lumber's graphing function.
-  document.addEventListener("DOMContentLoaded", function() {
-    lumber.graph("#lumber");
-  });
-</script>
 ```
 
 ## Installation
