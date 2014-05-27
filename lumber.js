@@ -45,7 +45,7 @@ function lumber_getGraphs() {
                      'x1:y1,x2:y2,...,xn:yn'
 
     Returns:
-      [{x1:y1},...{xn,yn}]
+      [{x1: x1_value, y1:y1_value},...{xn:xn_value,yn:yn_value}]
  */
 lumber.parseChartData = lumber_parseChartData;
 function lumber_parseChartData(dataAsString) {
@@ -53,7 +53,7 @@ function lumber_parseChartData(dataAsString) {
   return dataPoints.map(function(dataPoint) {
     data = {};
     data.y  = dataPoint.split(':')[1];
-    data.x = dataPoint.split(':')[0];
+    data.x  = dataPoint.split(':')[0];
     return data;
   });
 }
