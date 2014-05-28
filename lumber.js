@@ -38,6 +38,17 @@ function lumber_getGraphs() {
 }
 
 /*
+  resizeResponsiveGraphs
+
+    Select all the lumber graphs that are responsive and resize them base on their
+    aspect ratio and the current window size.
+ */
+lumber.resizeResponsiveGraphs = lumber_resizeResponsiveGraphs;
+function lumber_resizeResponsiveGraphs() {
+  // ...
+}
+
+/*
   parseChartData
 
     Params:
@@ -258,3 +269,10 @@ function lumber_stackedBar(chartDiv, lumberOpts) {
 if (!hasLumberDependencies()) {
   console.log("Missing dependencies for lumber.js.");
 }
+
+window.addEventListener("resize", function(event) {
+  if (window.resizing) clearTimeout(window.resizing);
+  window.resizing = setTimeout(function() {
+    lumber.resizeResponsiveGraphs();
+  }, 300)
+});
