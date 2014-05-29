@@ -38,6 +38,17 @@ function lumber_getGraphs() {
 }
 
 /*
+  resizeResponsiveGraphs
+
+    Select all the lumber graphs that are responsive and resize them base on their
+    aspect ratio and the current window size.
+ */
+lumber.resizeResponsiveGraphs = lumber_resizeResponsiveGraphs;
+function lumber_resizeResponsiveGraphs() {
+  // ...
+}
+
+/*
   parseChartData
 
     Params:
@@ -170,15 +181,56 @@ function lumber_barChart(chartDiv, lumberOpts) {
       .attr("width", x.rangeBand());
 }
 
+/*
+  pieChart
+
+  http://bl.ocks.org/mbostock/3887235
+ */
 lumber.pieChart = lumber_pieChart;
 function lumber_pieChart(chartDiv, lumberOpts) {
-  // ...
+  var width = 960,
+      height = 300,
+      radius = Math.min(width, height) / 2;
+
+  var color = d3.scale.ordinal()
+    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+
+  var arc = d3.svg.arc()
+      .outerRadius(radius - 10)
+      .innerRadius(0);
+
+  var pie = d3.layout.pie()
+      .sort(null)
+      .value(function(d) { return d.x; });
+
+  var svg = chartDiv
+      .attr("width", width)
+      .attr("height", height)
+    .append("g")
+      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+  lumberOpts.data.forEach(function(d) {
+    d.x = +d.x;
+  });
+
+  var g = svg.selectAll(".arc")
+      .data(pie(lumberOpts.data))
+    .enter().append("g")
+      .attr("class", "arc");
+
+  g.append("path")
+      .attr("d", arc)
+      .style("fill", function(d) { return color(d.data.x); });
+
+  g.append("text")
+      .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+      .attr("dy", ".35em")
+      .style("text-anchor", "middle")
+      .text(function(d) { console.log(d.data.y); return d.data.y; });
 }
 
 /*
   lineChart
-
-
 
   http://bl.ocks.org/mbostock/3883245
  */
@@ -258,3 +310,10 @@ function lumber_stackedBar(chartDiv, lumberOpts) {
 if (!hasLumberDependencies()) {
   console.log("Missing dependencies for lumber.js.");
 }
+
+window.addEventListener("resize", function(event) {
+  if (window.resizing) clearTimeout(window.resizing);
+  window.resizing = setTimeout(function() {
+    lumber.resizeResponsiveGraphs();
+  }, 300);
+});
