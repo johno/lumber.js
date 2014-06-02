@@ -311,9 +311,11 @@ if (!hasLumberDependencies()) {
   console.log("Missing dependencies for lumber.js.");
 }
 
+/*
 window.addEventListener("resize", function(event) {
   if (window.resizing) clearTimeout(window.resizing);
   window.resizing = setTimeout(function() {
     lumber.resizeResponsiveGraphs();
   }, 300);
 });
+*/
