@@ -4,7 +4,9 @@ _This is currently under development._
 
 A wrapper for d3.js. It allows you to specify graph data and styling with data attributes in page elements.
 
-__An example of it in action:__
+## Using HTML5 Data Attributes
+
+If you'd like to use 
 
 ```html
 <!-- Set the graph information in the data attributes of an svg tag. -->
@@ -15,6 +17,20 @@ __An example of it in action:__
      data-lumber-values="3:A,2:B,3:C,4:D,5:E,7:F,6:G,5:H,4:I,2:J,6:K,5:L,6:M">
 </svg>
 ```
+
+## Using Vanilla JS
+
+```js
+// Select the chart div using d3.
+chartDiv = d3.select("#bar-chart");
+
+// Specify the chart details in a simple object.
+lumberData = { data: [{ x: 3, y: "A"}, { x: 2, y: "B"}], width: "400", height: 250, type: "bar", yAxis: "Frequency", xAxis: "Letter" };
+
+// Call lumber so it can do it's magic.
+lumber.barChart(chartDiv, lumberData);
+```
+
 
 ## Installation
 
