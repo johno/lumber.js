@@ -1,0 +1,28 @@
+{
+  "name": "lumber",
+  "main": "lumber.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/johnotander/lumber",
+  "authors": [
+    "John Otander <johnotander@gmail.com>"
+  ],
+  "description": "A wrapper for d3.js. It allows you to specify graph data and styling with data attributes in page elements.",
+  "keywords": [
+    "lumber",
+    "d3",
+    "charts",
+    "chart",
+    "graphing",
+    "data",
+    "viz",
+    "visualization"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
