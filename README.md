@@ -6,7 +6,7 @@ A wrapper for d3.js. It allows you to specify graph data and styling with data a
 
 ## Using HTML5 Data Attributes
 
-If you'd like to use 
+If you'd like to use HTML5 data attributes:
 
 ```html
 <!-- Set the graph information in the data attributes of an svg tag. -->
